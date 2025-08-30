@@ -1,22 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reproductor de YouTube</title>
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+            background: #000;
+        }
+        #player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .local-videos {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 8px 16px;
+            background: #f00;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .video-info {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
-    <img src="./imagenes/1.webp" alt="">
-    <img src="./imagenes/2.webp" alt="">
-    <img src="./imagenes/3.webp" alt="">
-    <img src="./imagenes/4.webp" alt="">
-    <img src="./imagenes/5.webp" alt="">
-    <img src="./imagenes/6.webp" alt="">
-    <img src="./imagenes/7.webp" alt="">
-    <img src="./imagenes/8.webp" alt="">
-    <img src="./imagenes/9.webp" alt="">
-
-    <video src="./videos/video1.mp4" controls></video>
-    <video src="./videos/videoprueba2.mp4" controls></video>
+    <div class="gallery">
+        <img src="./imagenes/1.webp" alt="Imagen 1" onerror="this.style.display='none'">
+        <img src="./imagenes/2.webp" alt="Imagen 2" onerror="this.style.display='none'">
+        <img src="./imagenes/3.webp" alt="Imagen 3" onerror="this.style.display='none'">
+        <img src="./imagenes/4.webp" alt="Imagen 4" onerror="this.style.display='none'">
+        <img src="./imagenes/5.webp" alt="Imagen 5" onerror="this.style.display='none'">
+        <img src="./imagenes/6.webp" alt="Imagen 6" onerror="this.style.display='none'">
+        <img src="./imagenes/7.webp" alt="Imagen 7" onerror="this.style.display='none'">
+        <img src="./imagenes/8.webp" alt="Imagen 8" onerror="this.style.display='none'">
+        <img src="./imagenes/9.webp" alt="Imagen 9" onerror="this.style.display='none'">
+        <img src="./imagenes/10.webp" alt="Imagen 10" onerror="this.style.display='none'">
+    </div>
 </body>
 </html>
